@@ -8,6 +8,9 @@
 ## Instructions
 In `konami_code.js`, you'll notice that we've provided very little: well, nothing except -- what's that? If you open the file up in your text editor, you should see:
 ```js
+
+
+
 const codes = [
   "ArrowUp",
   "ArrowUp",
@@ -22,7 +25,27 @@ const codes = [
 ];
 
 function init() {
-  // your code here
+ 
+// Keep track of index outside of the event handler.
+let index = 0;
+document.body.addEventListener('keydown', function(e) {
+
+// This is the function that would be invoked by the event listener.
+function onKeyDownHandler(e) {
+  const key = e.key;
+ 
+  if (key === codes[index]) {
+    index++;
+ 
+    if (index === codes.length) {
+      alert("Hurray!");
+ 
+      index = 0;
+    }
+  } else {
+    index = 0;
+  }
+}
 }
 ```
 
