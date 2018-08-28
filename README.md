@@ -11,16 +11,7 @@ In `konami_code.js`, you'll notice that we've provided very little: well, nothin
 
 
 
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
+function init() {
 const codes = [
   "ArrowUp",
   "ArrowUp",
@@ -33,8 +24,6 @@ const codes = [
   "b",
   "a"
 ];
-function init() {
-
   var index = 0
   document.body.addEventListener('keydown' ,function(e){
   var key = e.key
@@ -50,6 +39,14 @@ function init() {
 
 })
 }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
 ```
 
 Have fun!
